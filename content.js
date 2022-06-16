@@ -40,15 +40,17 @@ setInterval(async () => {
 
   // All company link elements
   const companyLinkElements = document.querySelectorAll('[data-control-name="job_card_company_link"]');
-  for (const companyLinkElement of companyLinkElements) {
-    const companyName = companyLinkElement.innerText;
 
+  for (const companyLinkElement of companyLinkElements) {
     // Check if the sponsor list has it
     for (const chunk of chunks) {
+      const companyName = companyLinkElement.innerText;
+      const container = companyLinkElement.parentElement.parentElement.parentElement.parentElement;
+
       if (!chunk.includes(companyName)) continue;
 
-      const container = companyLinkElement.parentElement.parentElement.parentElement.parentElement;
       container.style.backgroundColor = 'rgba(39, 167, 94, 0.1)';
+      container.style.opacity = 1;
     }
   }
 }, 500);

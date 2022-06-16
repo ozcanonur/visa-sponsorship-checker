@@ -5,7 +5,7 @@
   "description": "Highlights companies that can sponsor visa on Linkedin job board",
   "content_scripts": [
     {
-      "matches": ["*://*.linkedin.com/jobs/search/*"],
+      "matches": ["*://*.linkedin.com/jobs/*"],
       "js": ["content.js"]
     }
   ],
