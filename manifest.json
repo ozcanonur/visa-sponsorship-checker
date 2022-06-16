@@ -1,17 +1,20 @@
 {
   "manifest_version": 3,
-  "name": "name",
-  "short_name": "shortN",
-  "description": "This extension will work someday I hope so",
-  "background": {
-    "service_worker": "background.js"
-  },
+  "name": "Linkedin visa sponsorship",
+  "short_name": "LVS",
+  "description": "Highlights companies that can sponsor visa on Linkedin job board",
+  "content_scripts": [
+    {
+      "matches": ["*://*.linkedin.com/jobs/search/*"],
+      "js": ["content.js"]
+    }
+  ],
   "icons": {
     "128": "icons/128.png",
     "48": "icons/48.png",
     "16": "icons/16.png"
   },
-  "permissions": ["contextMenus", "tabs", "activeTab"],
+  "permissions": ["scripting"],
   "version": "1.3",
   "default_locale": "en",
   "web_accessible_resources": [
