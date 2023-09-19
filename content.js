@@ -39,7 +39,7 @@ setInterval(async () => {
   if (!isReady) return;
 
   // All company link elements
-  const companyLinkElements = document.querySelectorAll('[data-control-name="job_card_company_link"]');
+  const companyLinkElements = document.getElementsByClassName('job-card-container__primary-description ');
 
   for (const companyLinkElement of companyLinkElements) {
     // Check if the sponsor list has it
